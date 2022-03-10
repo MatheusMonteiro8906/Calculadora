@@ -25,5 +25,15 @@ namespace Calculadora
             Button b = (Button)sender;
             results.Text = results.Text + b.Text;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            results.Text = "0";
+        }
+
+        private void operator_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

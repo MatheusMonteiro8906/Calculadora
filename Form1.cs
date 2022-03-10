@@ -12,6 +12,10 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
+        double value = 0;
+        string operation = "";
+        bool operation_pressed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +23,7 @@ namespace Calculadora
 
         private void button_Click(object sender, EventArgs e)
         {
-            if(results.Text == "0")
+            if((results.Text == "0")||(operation_pressed))
               results.Clear();
             
             Button b = (Button)sender;
@@ -32,6 +36,14 @@ namespace Calculadora
         }
 
         private void operator_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            operation = b.Text;
+            value = double.Parse(results.Text);
+            bool operation_pressed = true;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
         {
 
         }

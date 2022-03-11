@@ -21,7 +21,7 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             if((results.Text == "0")||(operation_pressed))
               results.Clear();
@@ -30,12 +30,12 @@ namespace Calculadora
             results.Text = results.Text + b.Text;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void CE_Click(object sender, EventArgs e)
         {
             results.Text = "0";
         }
 
-        private void operator_Click(object sender, EventArgs e)
+        private void Operator_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
             operation = b.Text;
@@ -43,9 +43,10 @@ namespace Calculadora
             bool operation_pressed = true;
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void Equal_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
